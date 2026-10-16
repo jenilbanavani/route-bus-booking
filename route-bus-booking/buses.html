@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e6">
+  <meta name="description" content="Search buses on ROUTE. Compare fares, departure times, operators and bus amenities.">
+  <title>Search Buses — ROUTE</title>
+  <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ROUTE home">
+        <img class="brand-mark" src="assets/route-mark.svg" alt="ROUTE logo">
+        <span class="brand-word">ROUTE<span>.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="buses.html" class="active">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Team</a>
+        <a href="index.html#popular">Routes</a>
+        <a href="index.html#why-route">Why ROUTE?</a>
+      </nav>
+      <div class="header-actions">
+        <a href="ticket.html" class="text-button">My Tickets</a>
+        <a href="buses.html" class="btn small">Book a bus <span>↗</span></a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <div class="page-topline">
+        <span class="page-number">02</span>
+        <span class="section-label">Find your ride</span>
+        <span class="serif-rule"></span>
+        <span class="tiny-label">Bus listing page</span>
+      </div>
+
+      <div class="results-title">
+        <div>
+          <h1>Search <span>buses.</span></h1>
+          <div class="results-subtitle">Pick your pace. Compare your options. Your next stop is closer than you think.</div>
+        </div>
+        <button class="btn secondary small" id="edit-search" type="button">↶ Edit search</button>
+      </div>
+
+      <div class="compact-search" style="margin-bottom:18px">
+        <span class="blue" style="font-size:18px">⌖</span>
+        <strong id="results-route">Ahmedabad → Mumbai</strong>
+        <span class="arrow">⇄</span>
+        <span id="results-date">Wed, 15 Oct 2026</span>
+        <span style="margin-left:auto" class="tiny-label">One way · Direct</span>
+      </div>
+
+      <div class="results-layout">
+        <aside class="panel filter-panel">
+          <div class="panel-heading">
+            <h3>Filters</h3>
+            <button class="link-button" id="clear-filters" type="button">Clear all</button>
+          </div>
+          <div class="filter-columns">
+            <div class="filter-group">
+              <h4>Departure time</h4>
+              <label class="check-row"><input class="time-check" type="checkbox" value="morning"> Before 12 PM</label>
+              <label class="check-row"><input class="time-check" type="checkbox" value="afternoon"> 12 PM – 6 PM</label>
+              <label class="check-row"><input class="time-check" type="checkbox" value="evening"> After 6 PM</label>
+            </div>
+            <div class="filter-group">
+              <h4>Bus type</h4>
+              <label class="check-row"><input class="filter-check" type="checkbox" value="AC Sleeper"> AC Sleeper</label>
+              <label class="check-row"><input class="filter-check" type="checkbox" value="AC Seater"> AC Seater</label>
+              <label class="check-row"><input class="filter-check" type="checkbox" value="Non-AC Sleeper"> Non-AC Sleeper</label>
+            </div>
+            <div class="filter-group">
+              <h4>Amenities</h4>
+              <label class="check-row"><input class="amenity-check" type="checkbox" value="WiFi"> Wi-Fi</label>
+              <label class="check-row"><input class="amenity-check" type="checkbox" value="Charging"> Charging point</label>
+              <label class="check-row"><input class="amenity-check" type="checkbox" value="Blanket"> Blanket</label>
+              <label class="check-row"><input class="amenity-check" type="checkbox" value="Live Tracking"> Live tracking</label>
+            </div>
+            <div class="filter-group">
+              <h4>Fare range</h4>
+              <input class="range-input" id="fare-range" type="range" min="500" max="3000" step="50" value="3000" aria-label="Maximum fare">
+              <div class="range-row">
+                <span>₹500</span>
+                <span id="fare-output">₹0 – ₹3,000</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section aria-label="Available buses">
+          <div class="list-tools">
+            <div>
+              <strong id="bus-count">5 buses found</strong>
+              <span style="margin-left:9px" id="results-route-small">Ahmedabad → Mumbai</span>
+            </div>
+            <label style="display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--muted)">
+              Sort by
+              <select class="sort-select" id="sort-buses">
+                <option value="recommended">Recommended</option>
+                <option value="price">Lowest fare</option>
+                <option value="departure">Departure time</option>
+                <option value="rating">Top rated</option>
+              </select>
+            </label>
+          </div>
+          <div class="bus-list" id="bus-list" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ROUTE.</strong> — Compare clearly. Travel confidently. College project demonstration.
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="buses.html">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Project Team</a>
+        <a href="index.html#popular">Popular routes</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

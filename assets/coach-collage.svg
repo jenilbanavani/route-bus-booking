@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" fill="none">
+  <rect x="300" y="26" width="260" height="238" fill="#194BFF"/>
+  <circle cx="430" cy="100" r="50" fill="#F4F0E6"/>
+  <path d="M24 346L80 190L112 346H24Z" fill="#191919"/>
+  <path d="M42 346V230M58 346V205M74 346V218M90 346V252" stroke="#F4F0E6" stroke-width="4"/>
+  <path d="M110 347V134H180V347Z" fill="#292929"/>
+  <path d="M120 158H170M120 181H170M120 204H170M120 227H170M120 250H170M120 273H170M120 296H170M120 319H170" stroke="#F4F0E6" stroke-width="4"/>
+  <path d="M150 134V94H163V134" stroke="#191919" stroke-width="5"/>
+  <path d="M157 95V52" stroke="#191919" stroke-width="3"/>
+  <path d="M188 346L248 200L308 346Z" fill="#B8B8B3"/>
+  <path d="M218 346V262M247 346V222M276 346V269" stroke="#191919" stroke-width="5"/>
+  <path d="M0 388H760" stroke="#191919" stroke-width="5"/>
+  <path d="M26 418H730" stroke="#191919" stroke-width="2" stroke-dasharray="24 15"/>
+  <path d="M326 346L382 178L438 346Z" fill="#E9E6DC" stroke="#191919" stroke-width="5"/>
+  <path d="M366 346V237M389 346V215M412 346V261" stroke="#191919" stroke-width="4"/>
+  <!-- distant bird -->
+  <path d="M358 70Q383 31 412 57Q431 77 454 63Q440 98 404 86Q381 78 358 70Z" fill="#191919"/>
+  <path d="M398 84L381 104L407 96Z" fill="#191919"/>
+  <!-- coach body -->
+  <g transform="translate(82 250)">
+    <path d="M38 48Q44 20 91 8L420 0Q454 2 468 34L493 165Q498 184 481 193L49 215Q20 214 15 190L0 98Q-4 65 38 48Z" fill="#171717" stroke="#171717" stroke-width="8"/>
+    <path d="M43 54Q50 29 93 22L413 14Q438 15 449 39L465 77L40 98Z" fill="#F1EFE8"/>
+    <path d="M55 51Q61 36 92 30L163 28L166 90L45 96Z" fill="#222222"/>
+    <path d="M176 28L254 25L258 86L174 89Z" fill="#222222"/>
+    <path d="M265 25L342 22L348 83L264 85Z" fill="#222222"/>
+    <path d="M354 21L410 20Q431 20 440 41L454 76L355 81Z" fill="#222222"/>
+    <path d="M19 107L465 88L483 158Q489 178 470 182L43 205Q30 204 27 186Z" fill="#E9E7DF"/>
+    <path d="M19 107L465 88L470 111L23 133Z" fill="#194BFF"/>
+    <path d="M39 144L114 140L117 188L45 192Z" fill="#D1D0CA"/>
+    <path d="M133 138L208 134L211 183L137 187Z" fill="#D1D0CA"/>
+    <path d="M227 133L302 129L305 178L231 182Z" fill="#D1D0CA"/>
+    <path d="M321 128L396 124L400 173L325 177Z" fill="#D1D0CA"/>
+    <path d="M410 124L458 122L470 160Q473 170 461 173L414 175Z" fill="#D1D0CA"/>
+    <path d="M32 111L461 94" stroke="#191919" stroke-width="4"/>
+    <path d="M25 198L475 176" stroke="#191919" stroke-width="5"/>
+    <path d="M10 104L4 84Q4 73 15 68L29 64L38 105Z" fill="#F4F0E6" stroke="#191919" stroke-width="4"/>
+    <path d="M469 95L486 96L493 135L478 137Z" fill="#F4F0E6" stroke="#191919" stroke-width="4"/>
+    <circle cx="105" cy="208" r="28" fill="#191919" stroke="#E5E2D8" stroke-width="8"/>
+    <circle cx="105" cy="208" r="10" fill="#A9AAA7"/>
+    <circle cx="399" cy="192" r="28" fill="#191919" stroke="#E5E2D8" stroke-width="8"/>
+    <circle cx="399" cy="192" r="10" fill="#A9AAA7"/>
+    <path d="M255 116L365 111L366 142L254 147Z" fill="#171717"/>
+    <text x="264" y="137" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="21" fill="#F4F0E6" transform="rotate(-3 264 137)">ROUTE</text>
+    <path d="M55 74L83 72M55 81L80 80" stroke="#F4F0E6" stroke-width="4"/>
+  </g>
+  <!-- foreground paper cutouts -->
+  <path d="M20 472H170L207 530H20Z" fill="#191919"/>
+  <path d="M34 490H60M34 503H93M34 516H72" stroke="#F4F0E6" stroke-width="4"/>
+  <path d="M560 416H741V560H560Z" fill="#194BFF"/>
+  <path d="M575 437H727M575 452H699M575 467H715" stroke="#F4F0E6" stroke-width="3"/>
+  <path d="M604 415L640 334L674 415" fill="#191919"/>
+  <path d="M623 415V372M640 415V355M657 415V381" stroke="#F4F0E6" stroke-width="4"/>
+</svg>

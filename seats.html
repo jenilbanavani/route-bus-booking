@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e6">
+  <meta name="description" content="Select your preferred bus seat on ROUTE. Live interactive cabin seat layout for lower and upper deck sleepers.">
+  <title>Choose Seats — ROUTE</title>
+  <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ROUTE home">
+        <img class="brand-mark" src="assets/route-mark.svg" alt="ROUTE logo">
+        <span class="brand-word">ROUTE<span>.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="buses.html" class="active">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Team</a>
+        <a href="index.html#popular">Routes</a>
+        <a href="index.html#why-route">Why ROUTE?</a>
+      </nav>
+      <div class="header-actions">
+        <a href="ticket.html" class="text-button">My Tickets</a>
+        <a href="buses.html" class="btn small">Book a bus <span>↗</span></a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <div class="page-heading-row">
+        <div>
+          <div class="page-topline" style="margin:0 0 13px">
+            <span class="page-number">03</span>
+            <span class="section-label">Choose your spot</span>
+            <span class="serif-rule"></span>
+            <span class="tiny-label">Seat booking page</span>
+          </div>
+          <h1 class="subpage-title">A seat with <span class="blue">your name.</span></h1>
+          <p>Pick a seat, settle in, and let the journey begin.</p>
+        </div>
+        <span class="mini-tag"><i class="status-dot"></i> Seat map live demo</span>
+      </div>
+
+      <div class="flow-progress" aria-label="Booking progress">
+        <div class="progress-step done"><span class="step-circle">✓</span><span>Search</span></div>
+        <span class="progress-line"></span>
+        <div class="progress-step active"><span class="step-circle">02</span><span>Select seats</span></div>
+        <span class="progress-line"></span>
+        <div class="progress-step"><span class="step-circle">03</span><span>Passenger</span></div>
+        <span class="progress-line"></span>
+        <div class="progress-step"><span class="step-circle">04</span><span>Payment</span></div>
+      </div>
+
+      <div class="panel journey-strip">
+        <div class="journey-city">
+          <span class="blue" style="font-size:20px">⌖</span>
+          <div>
+            <span id="seat-route">Ahmedabad → Mumbai</span>
+            <small>Route / one way</small>
+          </div>
+        </div>
+        <div class="journey-date">
+          <strong id="seat-date">Wed, 15 Oct 2026</strong>
+          <span>Travel date</span>
+        </div>
+      </div>
+
+      <div class="seat-layout">
+        <section class="panel seat-panel" aria-label="Bus seat selection">
+          <div class="bus-ident">
+            <div class="bus-thumb"><img src="assets/coach-collage.svg" alt="Coach bus"></div>
+            <div style="min-width:0;flex:1">
+              <h3 id="seat-bus-name">Shree Travels</h3>
+              <p id="seat-bus-meta">AC Sleeper · 8h 30m · 4.5 ★</p>
+              <span class="mini-tag blue-tag" style="margin-top:8px">₹ <span id="seat-price">1,200</span> / seat</span>
+            </div>
+            <button class="btn secondary small" type="button" id="back-to-buses">Change bus</button>
+          </div>
+
+          <div class="deck-tabs" role="group" aria-label="Choose bus deck">
+            <button class="deck-tab active" data-deck="lower" type="button">Lower deck</button>
+            <button class="deck-tab" data-deck="upper" type="button">Upper deck</button>
+          </div>
+
+          <div class="seat-legend">
+            <span><i class="legend-box"></i> Available</span>
+            <span><i class="legend-box selected"></i> Selected</span>
+            <span><i class="legend-box occupied"></i> Occupied</span>
+          </div>
+
+          <div class="bus-cabin">
+            <div class="driver-row">
+              <span class="eyebrow" style="margin-right:10px;align-self:center;color:#8d8980">Front</span>
+              <span class="driver-wheel" aria-label="Driver wheel"></span>
+            </div>
+            <div id="seat-grid" class="seat-grid" aria-label="Seat map"></div>
+          </div>
+
+          <div class="seat-caption">
+            <span>Front of bus</span>
+            <span>Rear of bus</span>
+          </div>
+        </section>
+
+        <aside class="panel summary-panel">
+          <h3>Booking summary <span class="blue">↗</span></h3>
+          <div class="summary-bus">
+            <div class="bus-thumb"><img src="assets/coach-collage.svg" alt="Coach bus"></div>
+            <div>
+              <strong id="summary-bus-name">Shree Travels</strong>
+              <small id="summary-bus-route">Ahmedabad → Mumbai</small>
+              <small id="summary-bus-date">Wed, 15 Oct 2026</small>
+            </div>
+          </div>
+          <div class="summary-rows">
+            <div class="summary-row"><span>Selected seats (<span id="selected-seat-count">0</span>)</span><strong id="selected-seat-list">None selected</strong></div>
+            <div class="summary-row"><span>Base fare</span><strong id="seat-base-fare">₹0</strong></div>
+            <div class="summary-row"><span>Convenience fee</span><strong id="seat-fee">₹0</strong></div>
+            <div class="summary-row total"><span>Total amount</span><strong id="seat-total">₹0</strong></div>
+          </div>
+          <p class="summary-note">Seat availability is simulated for this college project. Your selection is saved in this browser while you continue.</p>
+          <button class="btn full" id="continue-seats" type="button" disabled>Continue to passengers <span>→</span></button>
+          <div style="font-size:9px;color:var(--muted);text-align:center;margin-top:10px">Select up to 6 seats</div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ROUTE.</strong> — Find your comfort zone. College project demonstration.
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="buses.html">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Project Team</a>
+        <a href="buses.html">Bus results</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e6">
+  <meta name="description" content="ROUTE Demo Bus Ticket & Booking Receipt. College project demonstration.">
+  <title>Booking Confirmation & My Tickets — ROUTE</title>
+  <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ROUTE home">
+        <img class="brand-mark" src="assets/route-mark.svg" alt="ROUTE logo">
+        <span class="brand-word">ROUTE<span>.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="buses.html">Buses</a>
+        <a href="ticket.html" class="active">My Tickets</a>
+        <a href="project-team.html">Team</a>
+        <a href="index.html#popular">Routes</a>
+        <a href="index.html#why-route">Why ROUTE?</a>
+      </nav>
+      <div class="header-actions">
+        <a href="ticket.html" class="text-button">My Tickets</a>
+        <a href="buses.html" class="btn small">Book a bus <span>↗</span></a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <div class="page-topline">
+        <span class="page-number">05</span>
+        <span class="section-label" id="page-section-label">All aboard</span>
+        <span class="serif-rule"></span>
+        <span class="tiny-label" id="page-tiny-label">Demo E-Ticket & Receipt</span>
+      </div>
+
+      <div class="confirmation-header" id="confirmation-header">
+        <div class="success-mark" id="ticket-status-icon">✓</div>
+        <h1 id="ticket-header-title">Booking <span>Confirmed — Demo</span></h1>
+        <p id="ticket-header-sub">Your demo booking receipt is ready. Keep this ticket handy before boarding.</p>
+        <div class="demo-tag-pill">DEMO RECEIPT — No real ticket issued. No payment processed.</div>
+      </div>
+
+      <section class="ticket-wrap" aria-label="Your demo bus ticket">
+        <div class="ticket" id="ticket-root"></div>
+
+        <div class="ticket-actions" id="ticket-actions">
+          <button class="btn" id="download-ticket" type="button">↧ Download Receipt</button>
+          <button class="btn secondary" id="print-ticket" type="button">⎙ Print Receipt</button>
+          <button class="btn secondary" id="book-another-ticket" type="button">↻ Book Another Ticket</button>
+          <button class="btn secondary" id="share-ticket" type="button">↗ Share Details</button>
+        </div>
+
+        <div class="demo-banner">
+          College Demonstration Project · This simulated bus ticket was generated locally in your browser. No real payment was processed.
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ROUTE.</strong> — Same roads, new stories. College project demonstration.
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="buses.html">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Project Team</a>
+        <a href="index.html#popular">Popular routes</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

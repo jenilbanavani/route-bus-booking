@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e6">
+  <meta name="description" content="Passenger details and simulated payment for ROUTE bus tickets. College project demonstration.">
+  <title>Passenger & Payment — ROUTE</title>
+  <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="ROUTE home">
+        <img class="brand-mark" src="assets/route-mark.svg" alt="ROUTE logo">
+        <span class="brand-word">ROUTE<span>.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="buses.html" class="active">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Team</a>
+        <a href="index.html#popular">Routes</a>
+        <a href="index.html#why-route">Why ROUTE?</a>
+      </nav>
+      <div class="header-actions">
+        <a href="ticket.html" class="text-button">My Tickets</a>
+        <a href="buses.html" class="btn small">Book a bus <span>↗</span></a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <div class="page-heading-row">
+        <div>
+          <div class="page-topline" style="margin:0 0 13px">
+            <span class="page-number">04</span>
+            <span class="section-label">Almost on your way</span>
+            <span class="serif-rule"></span>
+            <span class="tiny-label">Booking & payment page</span>
+          </div>
+          <h1 class="subpage-title">Details, then <span class="blue">departure.</span></h1>
+          <p>Tell us who’s travelling and choose a demo payment method.</p>
+        </div>
+        <span class="mini-tag">⌑ Secure demo checkout</span>
+      </div>
+
+      <div class="flow-progress" aria-label="Booking progress">
+        <div class="progress-step done"><span class="step-circle">✓</span><span>Search</span></div>
+        <span class="progress-line"></span>
+        <div class="progress-step done"><span class="step-circle">✓</span><span>Select seats</span></div>
+        <span class="progress-line"></span>
+        <div class="progress-step active"><span class="step-circle">03</span><span>Passenger</span></div>
+        <span class="progress-line"></span>
+        <div class="progress-step active"><span class="step-circle">04</span><span>Payment</span></div>
+      </div>
+
+      <form id="checkout-form" class="checkout-layout">
+        <div class="checkout-main">
+          <section class="panel checkout-card">
+            <div class="card-title-row">
+              <h3>Passenger details</h3>
+              <span class="step-pill">Required <span>✳</span></span>
+            </div>
+            <div id="passenger-forms"></div>
+          </section>
+
+          <section class="panel checkout-card">
+            <div class="card-title-row">
+              <h3>Contact details</h3>
+              <span class="tiny-label">Ticket delivery</span>
+            </div>
+            <div class="contact-grid">
+              <div class="form-field">
+                <label for="contact-phone">Mobile number</label>
+                <input id="contact-phone" name="phone" type="tel" inputmode="tel" placeholder="+91 98765 43210" autocomplete="tel" required>
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Email address <span class="muted" style="font-weight:500">(optional)</span></label>
+                <input id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="secure-note">♧ Your details stay in this browser for this demo.</div>
+          </section>
+
+          <section class="panel checkout-card">
+            <div class="card-title-row">
+              <h3>Payment method</h3>
+              <span class="tiny-label">Demo simulation only</span>
+            </div>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="upi" checked>
+              <span class="payment-symbol">UPI</span>
+              <span style="flex:1"><strong>UPI (Demo)</strong><small>Google Pay, PhonePe, Paytm</small></span>
+              <span class="blue" style="font-weight:800">↗</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="card">
+              <span class="payment-symbol">▰</span>
+              <span style="flex:1"><strong>Debit / credit card (Demo)</strong><small>Visa, Mastercard, RuPay</small></span>
+              <span class="muted">•••</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="netbanking">
+              <span class="payment-symbol">⌂</span>
+              <span style="flex:1"><strong>Net banking (Demo)</strong><small>All major Indian banks</small></span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="wallet">
+              <span class="payment-symbol">◫</span>
+              <span style="flex:1"><strong>Wallet (Demo)</strong><small>Paytm, Amazon Pay and more</small></span>
+            </label>
+            <div class="offer-row">
+              <input id="offer-code" type="text" placeholder="Promo code (try ROUTE10 or FIRSTBUS)" aria-label="Promo code">
+              <button type="button" id="apply-offer">Apply code</button>
+            </div>
+            <div id="offer-message" class="offer-message" aria-live="polite"></div>
+          </section>
+        </div>
+
+        <aside class="panel summary-panel checkout-summary">
+          <h3>Your trip <span class="blue">↗</span></h3>
+          <div class="summary-bus">
+            <div class="bus-thumb"><img src="assets/coach-collage.svg" alt="Coach bus"></div>
+            <div>
+              <strong id="checkout-bus-name">Shree Travels</strong>
+              <small id="checkout-bus-route">Ahmedabad → Mumbai</small>
+              <span id="checkout-route" style="display:none">Ahmedabad → Mumbai</span>
+              <small id="checkout-date">Wed, 15 Oct 2026</small>
+            </div>
+          </div>
+          <div class="summary-rows">
+            <div class="summary-row"><span>Departure</span><strong id="checkout-depart">06:00 AM</strong></div>
+            <div class="summary-row"><span>Seats</span><strong id="checkout-seats">7, 14</strong></div>
+            <div class="summary-row"><span>Base fare</span><strong id="checkout-base">₹2,400</strong></div>
+            <div class="summary-row"><span>Discount</span><strong id="checkout-discount">₹0</strong></div>
+            <div class="summary-row"><span>Convenience fee</span><strong id="checkout-fee">₹36</strong></div>
+            <div class="summary-row total"><span>Total</span><strong id="checkout-total">₹2,436</strong></div>
+          </div>
+          <label class="terms-check">
+            <input type="checkbox" id="agree-terms" required>
+            <span>I confirm these passenger details are correct and understand this is a college demo booking.</span>
+          </label>
+          <button class="btn full" type="submit" id="confirm-booking-btn">Confirm Booking <span>→</span></button>
+          <p class="summary-note" style="margin-top:12px;margin-bottom:0">DEMO BOOKING — No real payment is processed. Clicking “Confirm Booking” generates an instant demo receipt.</p>
+        </aside>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>ROUTE.</strong> — Your details. Your journey. College project demonstration.
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="buses.html">Buses</a>
+        <a href="ticket.html">My Tickets</a>
+        <a href="project-team.html">Project Team</a>
+        <a href="seats.html">Edit seats</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
