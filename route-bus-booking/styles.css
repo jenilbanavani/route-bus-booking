@@ -215,6 +215,31 @@ img {
   font-size: 11px;
 }
 
+.nav-bus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 7px;
+  padding: 8px 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 8px rgba(25, 75, 255, 0.25);
+  transition: transform 0.18s, background 0.18s, box-shadow 0.18s;
+}
+
+.nav-bus-btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(25, 75, 255, 0.35);
+}
+
+.nav-bus-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
 .btn.full {
   width: 100%;
 }
