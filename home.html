@@ -7,6 +7,25 @@
   <meta name="description" content="Find your next stop with ROUTE. Explore bus routes, compare fares and book your journey online. College project demonstration.">
   <title>ROUTE — Online Bus Ticket Booking System</title>
   <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var fromTeam = params.get('from') === 'team';
+        var refIsTeam = document.referrer && (document.referrer.indexOf('index.html') !== -1 || document.referrer.indexOf('project-team.html') !== -1);
+        if (fromTeam || refIsTeam) {
+          sessionStorage.setItem('route_entered', 'true');
+        }
+        if (!sessionStorage.getItem('route_entered')) {
+          window.location.replace('index.html');
+        }
+      } catch (e) {
+        if (!document.referrer || document.referrer.indexOf('index') === -1) {
+          window.location.replace('index.html');
+        }
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>

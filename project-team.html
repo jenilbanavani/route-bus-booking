@@ -7,6 +7,9 @@
   <meta name="description" content="ROUTE — Online Bus Ticket Booking System. College project demonstration by Jenil Banavani and team, Department of BCA.">
   <title>Project Team & Academic Credits — ROUTE</title>
   <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
+  <script>
+    try { sessionStorage.setItem('route_entered', 'true'); } catch (e) {}
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
@@ -18,12 +21,12 @@
         <span class="brand-word">ROUTE<span>.</span></span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="home.html">Home</a>
+        <a href="home.html?from=team">Home</a>
         <a href="buses.html">Buses</a>
         <a href="ticket.html">My Tickets</a>
         <a href="index.html" class="active">Team</a>
-        <a href="home.html#popular">Routes</a>
-        <a href="home.html#why-route">Why ROUTE?</a>
+        <a href="home.html?from=team#popular">Routes</a>
+        <a href="home.html?from=team#why-route">Why ROUTE?</a>
       </nav>
       <div class="header-actions">
         <a href="ticket.html" class="text-button">My Tickets</a>
@@ -57,7 +60,7 @@
           </p>
 
           <div class="team-hero-actions">
-            <a href="home.html" class="btn">Launch Booking System <span>→</span></a>
+            <a href="home.html?from=team" class="btn">Launch Booking System <span>→</span></a>
             <a href="buses.html" class="btn secondary">Explore Bus Routes <span>↗</span></a>
             <a href="ticket.html" class="btn secondary">View Demo Receipt <span>🎫</span></a>
           </div>
@@ -182,11 +185,11 @@
         <strong>ROUTE.</strong> — Online Bus Ticket Booking System. College Project Demonstration.
       </div>
       <div class="footer-links">
-        <a href="home.html">Home</a>
+        <a href="home.html?from=team">Home</a>
         <a href="buses.html">Buses</a>
         <a href="ticket.html">My Tickets</a>
         <a href="index.html">Project Team</a>
-        <a href="home.html#why-route">Why ROUTE?</a>
+        <a href="home.html?from=team#why-route">Why ROUTE?</a>
       </div>
     </footer>
   </div>

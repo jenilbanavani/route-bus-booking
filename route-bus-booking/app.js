@@ -255,7 +255,7 @@
     const currentPath = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     $$('.nav-links a').forEach(a => {
       a.classList.remove('active');
-      const href = (a.getAttribute('href') || '').split('#')[0].toLowerCase();
+      const href = (a.getAttribute('href') || '').split('#')[0].split('?')[0].toLowerCase();
       if (
         (href === currentPath) ||
         ((currentPath === '' || currentPath === 'index.html' || currentPath === 'project-team.html') && (href === 'index.html' || href === 'project-team.html')) ||
