@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f0e6">
-  <meta name="description" content="Find your next stop with ROUTE. Explore bus routes, compare fares and book your journey online. College project demonstration.">
-  <title>ROUTE — Online Bus Ticket Booking System</title>
+  <meta name="description" content="ROUTE — Online Bus Ticket Booking System. College project demonstration by Jenil Banavani and team, Department of BCA.">
+  <title>Project Team & Academic Credits — ROUTE</title>
   <link rel="icon" href="assets/route-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -18,12 +18,12 @@
         <span class="brand-word">ROUTE<span>.</span></span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
+        <a href="home.html">Home</a>
         <a href="buses.html">Buses</a>
         <a href="ticket.html">My Tickets</a>
-        <a href="project-team.html">Team</a>
-        <a href="#popular">Routes</a>
-        <a href="#why-route">Why ROUTE?</a>
+        <a href="index.html" class="active">Team</a>
+        <a href="home.html#popular">Routes</a>
+        <a href="home.html#why-route">Why ROUTE?</a>
       </nav>
       <div class="header-actions">
         <a href="ticket.html" class="text-button">My Tickets</a>
@@ -33,138 +33,145 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
+      <div class="page-topline">
+        <span class="page-number">01</span>
+        <span class="section-label">Academic Demonstration</span>
+        <span class="serif-rule"></span>
+        <span class="tiny-label">BCA College Project</span>
+      </div>
+
+      <section class="team-hero" aria-labelledby="team-hero-heading">
+        <div class="team-hero-copy">
           <div class="micro-stack">
-            <span class="eyebrow blue">001 / Travel made clear</span>
+            <span class="eyebrow blue">001 / Capstone Demonstration</span>
             <span class="serif-rule"></span>
-            <strong>Explore<br>Connect<br>Go further.</strong>
+            <strong>Travel<br>Explore<br>Connect.</strong>
           </div>
-          <h1 id="hero-title">Your next stop <span>starts here.</span></h1>
-          <p class="hero-sub">Less planning. More places. Find a bus that fits your route, your time, and your kind of journey.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a href="#search" class="btn">Find your bus <span>→</span></a>
-            <a href="ticket.html" class="btn secondary">View My Tickets <span>↘</span></a>
+
+          <h1 id="team-hero-heading">
+            ONLINE <span>BUS TICKET</span> BOOKING SYSTEM
+          </h1>
+
+          <p class="team-hero-sub">
+            A web-based platform for booking bus tickets with ease, safety and reliable travel. Designed and developed as a college project demonstration for the Department of BCA.
+          </p>
+
+          <div class="team-hero-actions">
+            <a href="home.html" class="btn">Launch Booking System <span>→</span></a>
+            <a href="buses.html" class="btn secondary">Explore Bus Routes <span>↗</span></a>
+            <a href="ticket.html" class="btn secondary">View Demo Receipt <span>🎫</span></a>
           </div>
+
           <div class="hero-meta">
-            <span><i class="status-dot"></i> 1,000+ destinations</span>
-            <span>Zero booking fees</span>
-            <span>Verified operators</span>
+            <span><i class="status-dot"></i> College Capstone Project</span>
+            <span>Academic Year 2026</span>
+            <span>Department of BCA</span>
           </div>
         </div>
 
-        <figure class="hero-art">
-          <img src="assets/bus-clean.png" alt="ROUTE express coach bus with cobalt graphic shapes and flight patterns">
-          <figcaption class="art-caption">ROUTE EXPRESS COACH // DEPT OF BCA</figcaption>
+        <figure class="team-hero-art">
+          <img src="assets/bus-clean.png" alt="Monochrome coach bus on highway with cobalt blue geometric shapes and flight patterns">
+          <span class="team-hero-badge">ROUTE / BCA PROJECT // 2026</span>
         </figure>
       </section>
 
-      <section id="search" aria-label="Bus search">
-        <form class="booking-search" id="trip-search-form">
-          <div class="search-field">
-            <span class="icon search-icon">📍</span>
-            <div style="flex:1">
-              <label for="from-city">From</label>
-              <select id="from-city" name="from">
-                <option value="Ahmedabad" selected>Ahmedabad (AHM)</option>
-                <option value="Surat">Surat (SUR)</option>
-                <option value="Vadodara">Vadodara (BDQ)</option>
-                <option value="Rajkot">Rajkot (RAJ)</option>
-                <option value="Mumbai">Mumbai (BOM)</option>
-                <option value="Pune">Pune (PUN)</option>
-              </select>
-            </div>
-            <button type="button" class="swap-btn" id="swap-cities" title="Swap cities" aria-label="Swap cities">⇄</button>
-          </div>
-
-          <div class="search-field">
-            <span class="icon search-icon">🎯</span>
-            <div style="flex:1">
-              <label for="to-city">To</label>
-              <select id="to-city" name="to">
-                <option value="Mumbai" selected>Mumbai (BOM)</option>
-                <option value="Pune">Pune (PUN)</option>
-                <option value="Ahmedabad">Ahmedabad (AHM)</option>
-                <option value="Surat">Surat (SUR)</option>
-                <option value="Vadodara">Vadodara (BDQ)</option>
-                <option value="Goa">Goa (GOI)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="search-field">
-            <span class="icon search-icon">📅</span>
-            <div style="flex:1">
-              <label for="travel-date">Date of Journey</label>
-              <input type="date" id="travel-date" name="date" value="2026-10-15">
-            </div>
-          </div>
-
-          <button type="submit" class="btn search-submit">Search buses <span>→</span></button>
-        </form>
-      </section>
-
-      <section id="popular" class="popular-routes" aria-label="Popular routes">
-        <span class="tiny-label">Popular routes</span>
-        <button type="button" class="route-chip" data-from="Ahmedabad" data-to="Mumbai">Ahmedabad → Mumbai <span class="blue">from ₹1,150</span></button>
-        <button type="button" class="route-chip" data-from="Surat" data-to="Pune">Surat → Pune <span class="blue">from ₹950</span></button>
-        <button type="button" class="route-chip" data-from="Vadodara" data-to="Mumbai">Vadodara → Mumbai <span class="blue">from ₹850</span></button>
-        <button type="button" class="route-chip" data-from="Mumbai" data-to="Goa">Mumbai → Goa <span class="blue">from ₹1,400</span></button>
-      </section>
-
-      <section class="stats-row" aria-label="Platform highlights">
-        <article class="stat-card">
-          <div>
-            <strong>12K+</strong>
-            <div class="tiny-label" style="margin-top:4px">Monthly riders</div>
-          </div>
-          <span>Fast, reliable journeys planned daily</span>
-        </article>
-        <article class="stat-card">
-          <div>
-            <strong>48+</strong>
-            <div class="tiny-label" style="margin-top:4px">Connected hubs</div>
-          </div>
-          <span>Major terminals and local stop networks</span>
-        </article>
-        <article class="stat-card">
-          <div>
-            <strong>4.8★</strong>
-            <div class="tiny-label" style="margin-top:4px">Rider rating</div>
-          </div>
-          <span>Consistently trusted passenger experience</span>
-        </article>
-        <article class="stat-card">
-          <div>
-            <strong>100%</strong>
-            <div class="tiny-label" style="margin-top:4px">Instant seats</div>
-          </div>
-          <span>Live seat confirmation with demo receipt</span>
-        </article>
-      </section>
-
-      <section id="why-route" style="margin-top:54px" aria-label="Why choose ROUTE">
-        <div class="page-topline">
-          <span class="page-number">01</span>
-          <span class="section-label">Why ROUTE?</span>
+      <section class="team-roster-section" aria-labelledby="roster-heading">
+        <div class="team-section-header">
+          <span class="team-section-badge" id="roster-heading">Project Team</span>
           <span class="serif-rule"></span>
-          <span class="tiny-label">Built for modern travel</span>
+          <span class="tiny-label">Development Roster</span>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:16px">
-          <article class="panel" style="padding:22px">
-            <span class="mini-tag blue-tag" style="margin-bottom:12px">Smart Booking</span>
-            <h3 style="font-size:16px;margin:0 0 8px">Interactive Seat Selection</h3>
-            <p style="color:var(--muted);font-size:12px;line-height:1.6;margin:0">Choose lower or upper deck sleepers with real-time pricing and dynamic total calculation.</p>
+
+        <div class="team-grid">
+          <!-- Member 01 -->
+          <article class="team-card">
+            <div class="team-card-top">
+              <span class="team-num">01</span>
+              <span class="team-tag">Project Lead</span>
+            </div>
+            <div class="team-info">
+              <h2>JENIL BANAVANI</h2>
+              <div class="team-meta">
+                <span>Enrollment No.</span>
+                <strong>253310601001</strong>
+              </div>
+            </div>
           </article>
-          <article class="panel" style="padding:22px">
-            <span class="mini-tag blue-tag" style="margin-bottom:12px">Instant Confirmation</span>
-            <h3 style="font-size:16px;margin:0 0 8px">Realistic Demo E-Tickets</h3>
-            <p style="color:var(--muted);font-size:12px;line-height:1.6;margin:0">Generates branded booking IDs, scannable QR verification codes, passenger rosters, and fare summaries.</p>
+
+          <!-- Member 02 -->
+          <article class="team-card">
+            <div class="team-card-top">
+              <span class="team-num">02</span>
+              <span class="team-tag">Core Team</span>
+            </div>
+            <div class="team-info">
+              <h2>HARSHAD SOLANKI</h2>
+              <div class="team-meta">
+                <span>Enrollment No.</span>
+                <strong>253310601017</strong>
+              </div>
+            </div>
           </article>
-          <article class="panel" style="padding:22px">
-            <span class="mini-tag blue-tag" style="margin-bottom:12px">College Showcase</span>
-            <h3 style="font-size:16px;margin:0 0 8px">Academic BCA Project</h3>
-            <p style="color:var(--muted);font-size:12px;line-height:1.6;margin:0">Built by Jenil Banavani and team under the guidance of Prof. Sir Name, Department of BCA.</p>
+
+          <!-- Member 03 -->
+          <article class="team-card">
+            <div class="team-card-top">
+              <span class="team-num">03</span>
+              <span class="team-tag">Core Team</span>
+            </div>
+            <div class="team-info">
+              <h2>KRISHNA BODAK</h2>
+              <div class="team-meta">
+                <span>Enrollment No.</span>
+                <strong>253310601003</strong>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="team-guidance-section" aria-labelledby="guidance-heading">
+        <div class="team-section-header">
+          <span class="team-section-badge" id="guidance-heading">Under the Guidance Of</span>
+          <span class="serif-rule"></span>
+          <span class="tiny-label">Faculty Acknowledgement</span>
+        </div>
+
+        <div class="guidance-split">
+          <article class="guide-card">
+            <div>
+              <span class="guide-role">Faculty Project Guide</span>
+              <h2>PROF. VISHAL KOSTI</h2>
+              <span class="guide-dept">Department of BCA</span>
+            </div>
+            <p class="guide-note">
+              Special thanks to our faculty guide Prof. Vishal Kosti and the Department of BCA for continuous mentorship, technical evaluation, and academic guidance throughout the design and realization of the ROUTE platform.
+            </p>
+          </article>
+
+          <article class="specs-card">
+            <div>
+              <span class="guide-role">Project Specifications</span>
+              <h2 style="font-family:'Oswald',sans-serif;font-size:24px;text-transform:uppercase;margin:0 0 12px;color:var(--ink);">Platform Highlights</h2>
+            </div>
+            <div class="specs-grid">
+              <div class="spec-item">
+                <span>Core Stack</span>
+                <strong>HTML5, CSS3, Vanilla JS</strong>
+              </div>
+              <div class="spec-item">
+                <span>Module Flow</span>
+                <strong>Search → Seats → Ticket</strong>
+              </div>
+              <div class="spec-item">
+                <span>Design Tone</span>
+                <strong>Warm Ivory & Cobalt Editorial</strong>
+              </div>
+              <div class="spec-item">
+                <span>Zero Server</span>
+                <strong>Runs Directly via file://</strong>
+              </div>
+            </div>
           </article>
         </div>
       </section>
@@ -175,11 +182,11 @@
         <strong>ROUTE.</strong> — Online Bus Ticket Booking System. College Project Demonstration.
       </div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
+        <a href="home.html">Home</a>
         <a href="buses.html">Buses</a>
         <a href="ticket.html">My Tickets</a>
-        <a href="project-team.html">Project Team</a>
-        <a href="#why-route">Why ROUTE?</a>
+        <a href="index.html">Project Team</a>
+        <a href="home.html#why-route">Why ROUTE?</a>
       </div>
     </footer>
   </div>

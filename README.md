@@ -8,21 +8,21 @@ A responsive, zero-server bus ticket booking web application developed as an aca
 
 **No server, Node.js, Python, npm, build tools, or database required.**
 
-1. Simply **double-click `index.html`** in this folder to launch the website directly in any modern web browser (Chrome, Edge, Firefox, Safari) using the `file://` protocol.
-2. Alternatively, right-click `index.html` and choose **Open with > Your preferred browser**.
+1. Simply **double-click `index.html`** in this folder to launch the Project Team & Academic Demonstration page directly in any modern web browser (Chrome, Edge, Firefox, Safari) using the `file://` protocol. From there, click **"Launch Booking System →"** to enter the booking application.
+2. Alternatively, right-click `index.html` (or `home.html` for direct booking) and choose **Open with > Your preferred browser**.
 
 ---
 
 ## Application Pages & Flow
 
-1. **`index.html` (Home Page)**: Route origin & destination search, journey date selection, city-swap tool, popular quick-select routes, highlights, and platform benefits.
-2. **`buses.html` (Search Buses)**: Dynamic bus listings, real-time filters (departure time, sleeper/seater types, amenities, price range slider), and multi-criteria sorting (recommended, lowest fare, departure time, top rated).
-3. **`seats.html` (Seat Selection)**: Interactive bus cabin layout with lower/upper deck views, real-time seat availability (available, selected, occupied), 6-seat booking cap, and instant fare calculation.
-4. **`checkout.html` (Passenger & Payment)**: Dynamic passenger details roster (one form per selected seat with validation), contact details, promo codes (`ROUTE10` for 10% off, `FIRSTBUS` for ₹150 off), and simulated payment method selection (UPI, Card, Net Banking, Wallet).
-5. **`ticket.html` (Booking Confirmation & My Tickets)**: Realistic demo e-ticket receipt featuring a unique booking ID, route details, passenger roster, fare summary, procedural SVG QR code, and actions to download an offline HTML receipt, print/save as PDF, copy booking ID, or share. Also serves as the "My Tickets" persistent archive.
-6. **`project-team.html` (Project Team & Academic Credits)**: Academic capstone demonstration details, development team roster (Jenil Banavani and team), faculty project guide acknowledgment, and platform specifications.
+1. **`index.html` / `project-team.html` (Project Team & Academic Demonstration — Opens First)**: Academic capstone demonstration details, development team roster (Jenil Banavani and team), faculty project guide acknowledgment, and platform specifications with a direct "Launch Booking System" gateway.
+2. **`home.html` (Bus Booking Home Page)**: Route origin & destination search, journey date selection, city-swap tool, popular quick-select routes, highlights, and platform benefits.
+3. **`buses.html` (Search Buses)**: Dynamic bus listings, real-time filters (departure time, sleeper/seater types, amenities, price range slider), and multi-criteria sorting (recommended, lowest fare, departure time, top rated).
+4. **`seats.html` (Seat Selection)**: Interactive bus cabin layout with lower/upper deck views, real-time seat availability (available, selected, occupied), 6-seat booking cap, and instant fare calculation.
+5. **`checkout.html` (Passenger & Payment)**: Dynamic passenger details roster (one form per selected seat with validation), contact details, promo codes (`ROUTE10` for 10% off, `FIRSTBUS` for ₹150 off), and simulated payment method selection (UPI, Card, Net Banking, Wallet).
+6. **`ticket.html` (Booking Confirmation & My Tickets)**: Realistic demo e-ticket receipt featuring a unique booking ID, route details, passenger roster, fare summary, procedural SVG QR code, and actions to download an offline HTML receipt, print/save as PDF, copy booking ID, or share. Also serves as the "My Tickets" persistent archive.
 
-*(Note: `home.html` and `my-tickets.html` are included as convenient aliases to ensure all external links and bookmarks resolve seamlessly).*
+*(Note: `project-team.html` and `my-tickets.html` are included as convenient aliases to ensure all external links and bookmarks resolve seamlessly).*
 
 ---
 

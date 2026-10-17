@@ -258,9 +258,10 @@
       const href = (a.getAttribute('href') || '').split('#')[0].toLowerCase();
       if (
         (href === currentPath) ||
-        ((currentPath === '' || currentPath === 'index.html' || currentPath === 'home.html') && (href === 'index.html' || href === 'home.html')) ||
-        (currentPath === 'project-team.html' && href === 'project-team.html') ||
-        (currentPath === 'ticket.html' && href === 'ticket.html')
+        ((currentPath === '' || currentPath === 'index.html' || currentPath === 'project-team.html') && (href === 'index.html' || href === 'project-team.html')) ||
+        (currentPath === 'home.html' && href === 'home.html') ||
+        ((currentPath === 'buses.html' || currentPath === 'seats.html' || currentPath === 'checkout.html') && href === 'buses.html') ||
+        ((currentPath === 'ticket.html' || currentPath === 'my-tickets.html') && (href === 'ticket.html' || href === 'my-tickets.html'))
       ) {
         a.classList.add('active');
       }
@@ -449,7 +450,7 @@
       render();
     });
     $('#sort-buses')?.addEventListener('change', render);
-    $('#edit-search')?.addEventListener('click', () => { location.href = 'index.html#search'; });
+    $('#edit-search')?.addEventListener('click', () => { location.href = 'home.html#search'; });
     render();
   }
 
@@ -1237,7 +1238,7 @@
       seats: seats,
       passengers: [
         { seat: 7, name: 'Jenil Banavani', age: '20', gender: 'Male' },
-        { seat: 14, name: 'Dhruv Patel', age: '21', gender: 'Male' }
+        { seat: 14, name: 'Harshad Solanki', age: '20', gender: 'Male' }
       ],
       contact: { phone: '+91 98765 43210', email: 'jenil@example.com' },
       bus: { ...bus },
@@ -1287,7 +1288,7 @@
         <h2>No saved tickets yet</h2>
         <p>You haven’t completed any demo bus bookings in this browser yet. Search routes and select seats to generate your official demo ticket, or load a realistic sample receipt instantly.</p>
         <div class="empty-actions">
-          <a href="index.html" class="btn">Find a bus now <span>→</span></a>
+          <a href="home.html" class="btn">Find a bus now <span>→</span></a>
           <button class="btn secondary" id="load-sample-btn" type="button">Preview sample ticket <span>↗</span></button>
         </div>
       </div>`;
@@ -1559,7 +1560,7 @@
       fresh.booking = null; // Clears active draft so home begins clean
       // Note: fresh.latestBooking and fresh.savedBookings remain untouched in localStorage!
       save(fresh);
-      location.href = 'index.html';
+      location.href = 'home.html';
     });
 
     $('#share-ticket')?.addEventListener('click', async () => {
